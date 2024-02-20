@@ -1,0 +1,7 @@
+{% load menu_extras %}
+
+<a href='{{ root.url }}' style='padding-left: {{ count }}px'>{{ root.name }}</a>
+<br>
+{% for child in root.children %}
+    {% draw_menu child.name count %}
+{% endfor %}
